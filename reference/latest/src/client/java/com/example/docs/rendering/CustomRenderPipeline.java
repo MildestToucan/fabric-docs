@@ -1,5 +1,6 @@
 package com.example.docs.rendering;
 
+import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
 
@@ -38,7 +39,7 @@ public class CustomRenderPipeline implements ClientModInitializer {
 	// :::custom-pipelines:define-pipeline
 	private static final RenderPipeline FILLED_THROUGH_WALLS = RenderPipelines.register(RenderPipeline.builder(RenderPipelines.DEBUG_FILLED_SNIPPET)
 			.withLocation(Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "pipeline/debug_filled_box_through_walls"))
-			//.withDepthTestFunction(DepthTestFunction.NO_DEPTH_TEST)
+			.withDepthStencilState(Optional.empty())
 			.build()
 	);
 	// :::custom-pipelines:define-pipeline
