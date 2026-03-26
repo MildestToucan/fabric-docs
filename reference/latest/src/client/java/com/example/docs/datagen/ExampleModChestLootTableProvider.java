@@ -3,6 +3,8 @@ package com.example.docs.datagen;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
+import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableSubProvider;
+
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Items;
@@ -13,14 +15,13 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 
 import com.example.docs.ModLootTables;
 
 // :::datagen-loot-tables:chest-provider
-public class ExampleModChestLootTableProvider extends SimpleFabricLootTableProvider {
-	public ExampleModChestLootTableProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registryLookup) {
+public class ExampleModChestLootTableProvider extends SimpleFabricLootTableSubProvider {
+	public ExampleModChestLootTableProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookup) {
 		super(output, registryLookup, LootContextParamSets.CHEST);
 	}
 

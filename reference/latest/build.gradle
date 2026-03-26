@@ -5,8 +5,7 @@ def fabricApiVersion = "0.144.3+26.1"
 dependencies {
 // :::automatic-testing:game-test:2
   minecraft "com.mojang:minecraft:${minecraftVersion}"
-  mappings loom.officialMojangMappings()
-  modImplementation "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
+  implementation "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
 
 // :::automatic-testing:game-test:2
   productionRuntimeMods "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"

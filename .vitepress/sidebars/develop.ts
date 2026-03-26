@@ -131,8 +131,8 @@ export default [
         ],
       },
       {
-        text: "develop.blocks.transparency_and_tinting",
-        link: "/develop/blocks/transparency-and-tinting",
+        text: "develop.blocks.block_tinting",
+        link: "/develop/blocks/block-tinting",
       },
     ],
   },
@@ -369,13 +369,9 @@ export default [
       {
         text: "develop.porting.release",
         link: "/develop/porting/",
-      },
-      {
-        text: "develop.porting.snapshot",
-        link: "/26.1/develop/porting/",
         items: [
           {
-            text: "develop.porting.snapshot.fabric_api",
+            text: "develop.porting.fabric_api",
             link: "/26.1/develop/porting/fabric-api",
           },
         ],

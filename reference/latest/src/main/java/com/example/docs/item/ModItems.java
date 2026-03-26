@@ -34,10 +34,10 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.Level;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.fabricmc.fabric.api.registry.CompostableRegistry;
+import net.fabricmc.fabric.api.registry.FuelValueEvents;
 
 import com.example.docs.ExampleMod;
 import com.example.docs.block.ModBlocks;
@@ -111,9 +111,9 @@ public class ModItems {
 	public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
 			BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "creative_tab")
 	);
-	public static final CreativeModeTab CUSTOM_CREATIVE_TAB = FabricItemGroup.builder()
+	public static final CreativeModeTab CUSTOM_CREATIVE_TAB = FabricCreativeModeTab.builder()
 			.icon(() -> new ItemStack(ModItems.GUIDITE_SWORD))
-			.title(Component.translatable("itemGroup.example-mod"))
+			.title(Component.translatable("creativeTab.example-mod"))
 			.displayItems((params, output) -> {
 				output.accept(ModItems.SUSPICIOUS_SUBSTANCE);
 				output.accept(ModItems.POISONOUS_APPLE);
@@ -223,21 +223,21 @@ public class ModItems {
 		// :::4
 		// Get the event for modifying entries in the ingredients group.
 		// And register an event handler that adds our suspicious item to the ingredients group.
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
-				.register((itemGroup) -> itemGroup.accept(ModItems.SUSPICIOUS_SUBSTANCE));
+		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
+				.register((creativeTab) -> creativeTab.accept(ModItems.SUSPICIOUS_SUBSTANCE));
 		// :::4
 
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
-				.register((itemGroup) -> {
-					itemGroup.accept(ModItems.GUIDITE_HELMET);
-					itemGroup.accept(ModItems.GUIDITE_BOOTS);
-					itemGroup.accept(ModItems.GUIDITE_LEGGINGS);
-					itemGroup.accept(ModItems.GUIDITE_CHESTPLATE);
+		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+				.register((creativeTab) -> {
+					creativeTab.accept(ModItems.GUIDITE_HELMET);
+					creativeTab.accept(ModItems.GUIDITE_BOOTS);
+					creativeTab.accept(ModItems.GUIDITE_LEGGINGS);
+					creativeTab.accept(ModItems.GUIDITE_CHESTPLATE);
 				});
 
 		// :::8
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
-				.register((itemGroup) -> itemGroup.accept(ModItems.GUIDITE_SWORD));
+		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+				.register((creativeTab) -> creativeTab.accept(ModItems.GUIDITE_SWORD));
 		// :::8
 
 		// :::_12
@@ -246,31 +246,31 @@ public class ModItems {
 		// :::_12
 
 		// :::spawn_egg_creative_tab
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(itemGroup -> {
-			itemGroup.accept(ModItems.MINI_GOLEM_SPAWN_EGG);
+		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS).register(creativeTab -> {
+			creativeTab.accept(ModItems.MINI_GOLEM_SPAWN_EGG);
 		});
 		// :::spawn_egg_creative_tab
-		ItemGroupEvents.modifyEntriesEvent(CUSTOM_CREATIVE_TAB_KEY).register(itemGroup -> {
-			itemGroup.accept(ModItems.RUBY);
-			itemGroup.accept(ModItems.GUIDITE_AXE);
-			itemGroup.accept(ModItems.LEATHER_GLOVES);
-			itemGroup.accept(ModItems.FLASHLIGHT);
-			itemGroup.accept(ModItems.BALLOON);
-			itemGroup.accept(ModItems.ENHANCED_HOE);
-			itemGroup.accept(ModItems.DIMENSIONAL_CRYSTAL);
-			itemGroup.accept(ModItems.THROWING_KNIVES);
+		CreativeModeTabEvents.modifyOutputEvent(CUSTOM_CREATIVE_TAB_KEY).register(creativeTab -> {
+			creativeTab.accept(ModItems.RUBY);
+			creativeTab.accept(ModItems.GUIDITE_AXE);
+			creativeTab.accept(ModItems.LEATHER_GLOVES);
+			creativeTab.accept(ModItems.FLASHLIGHT);
+			creativeTab.accept(ModItems.BALLOON);
+			creativeTab.accept(ModItems.ENHANCED_HOE);
+			creativeTab.accept(ModItems.DIMENSIONAL_CRYSTAL);
+			creativeTab.accept(ModItems.THROWING_KNIVES);
 		});
 
 		// :::_10
 		// Add the suspicious substance to the composting registry with a 30% chance of increasing the composter's level.
-		CompostingChanceRegistry.INSTANCE.add(ModItems.SUSPICIOUS_SUBSTANCE, 0.3f);
+		CompostableRegistry.INSTANCE.add(ModItems.SUSPICIOUS_SUBSTANCE, 0.3f);
 		// :::_10
 
 		// :::_11
 		// Add the suspicious substance to the registry of fuels, with a burn time of 30 seconds.
 		// Remember, Minecraft deals with logical based-time using ticks.
 		// 20 ticks = 1 second.
-		FuelRegistryEvents.BUILD.register((builder, context) -> {
+		FuelValueEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.SUSPICIOUS_SUBSTANCE, 30 * 20);
 		});
 		// :::_11

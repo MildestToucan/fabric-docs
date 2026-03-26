@@ -1,19 +1,19 @@
 ---
-title: Porting to 26.1 Snapshots
-description: Guidelines for porting to snapshots of Minecraft 26.1, the upcoming version of Minecraft.
+title: Porting to 26.1
+description: Guidelines for porting to Minecraft 26.1, the latest version of Minecraft.
 authors:
   - cassiancc
 resources:
   ./26.1/fabric-api: Fabric API 26.1 Porting Guide
   https://minecraft.wiki/w/Java_Edition_26.1: Java Edition 26.1 - Minecraft Wiki
-  https://github.com/ChampionAsh5357/neoforged-github/blob/update/26.1/primers/26.1/index.md: ChampionAsh5357's 1.21.11 -> 26.1 Migration Primers
+  https://github.com/neoforged/.github/blob/main/primers/26.1/index.md: ChampionAsh5357's 1.21.11 -> 26.1 Migration Primers
 ---
 
-The upcoming 26.1 version of Minecraft is unobfuscated, as are its snapshots. With this in mind, you'll need to make more changes to your build scripts than usual in order to port to it.
+The 26.1 version of Minecraft is unobfuscated, as are its snapshots. With this in mind, you'll need to make more changes to your build scripts than usual in order to port to it.
 
 ::: info
 
-These docs discuss migrating from **1.21.11** to the snapshots of the upcoming **26.1**. If you're looking for another migration, switch to the target version by using the dropdown in the top-right corner.
+These docs discuss migrating from **1.21.11** to **26.1**. If you're looking for another migration, switch to the target version by using the dropdown in the top-right corner.
 
 :::
 
@@ -42,15 +42,9 @@ Start by updating your mod's `gradle/wrapper/gradle-wrapper.properties`, `gradle
 
 After the build script has been updated to 26.1, you can now go through your mod and update any code that has changed to make it compatible with the snapshot.
 
-::: warning IMPORTANT
-
-Because Minecraft 26.1 is still in the snapshot stage, documentation on specific changes is still lacking. Good luck, you're on your own!
-
-:::
-
+- [Fabric for Minecraft 26.1 on the Fabric blog](https://fabricmc.net/2026/03/14/261.html) contains a high-level explanation of the changes made to Fabric API in 26.1.
 - [Fabric API 26.1 Porting Guide](./fabric-api) lists the renames made to Fabric API in 26.1 snapshots to match Mojang's names.
 - [_Java Edition 26.1_ on the Minecraft Wiki](https://minecraft.wiki/w/Java_Edition_26.1) is an unofficial summary of the contents of the update.
 - [NeoForge's _Minecraft 1.21.11 -> 26.1 Mod Migration Primer_](https://github.com/neoforged/.github/blob/main/primers/26.1/index.md) covers migrating from 1.21.11 to 26.1, focusing only on vanilla code changes.
-  - Please note that the linked article is third-party material, not maintained by Fabric. It's under copyright of @ChampionAsh5357, and licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
 <!---->

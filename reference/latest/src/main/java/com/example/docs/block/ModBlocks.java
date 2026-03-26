@@ -24,7 +24,7 @@ import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 
 import com.example.docs.ExampleMod;
 import com.example.docs.block.custom.CounterBlock;
@@ -181,8 +181,8 @@ public class ModBlocks {
 
 	public static void setupItemGroups() {
 		// :::6
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register((itemGroup) -> {
-			itemGroup.accept(ModBlocks.CONDENSED_DIRT.asItem());
+		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> {
+			creativeTab.accept(ModBlocks.CONDENSED_DIRT.asItem());
 		});
 		// :::6
 	}

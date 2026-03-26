@@ -62,7 +62,7 @@ If you want to add the item to a custom creative tab, check out the [Custom Crea
 
 :::
 
-For example purposes, we will add this item to the ingredients `CreativeModeTab`, you will need to use Fabric API's creative tab events - specifically `ItemGroupEvents.modifyEntriesEvent`
+For example purposes, we will add this item to the ingredients `CreativeModeTab`, you will need to use Fabric API's creative tab events - specifically `CreativeModeTabEvents.modifyOutputEvent`
 
 This can be done in the `initialize` method of your items class.
 
@@ -155,11 +155,11 @@ Your item should now look like this in-game:
 
 Fabric API provides various registries that can be used to add additional properties to your item.
 
-For example, if you want to make your item compostable, you can use the `CompostingChanceRegistry`:
+For example, if you want to make your item compostable, you can use the `CompostableRegistry`:
 
 @[code transcludeWith=:::\_10](@/reference/latest/src/main/java/com/example/docs/item/ModItems.java)
 
-Alternatively, if you want to make your item a fuel, you can use the `FuelRegistryEvents.BUILD` event:
+Alternatively, if you want to make your item a fuel, you can use the `FuelValueEvents.BUILD` event:
 
 @[code transcludeWith=:::\_11](@/reference/latest/src/main/java/com/example/docs/item/ModItems.java)
 

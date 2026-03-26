@@ -10,10 +10,10 @@ import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.resources.Identifier;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 
 public class ExampleModAppearanceModelProvider extends FabricModelProvider {
-	public ExampleModAppearanceModelProvider(FabricDataOutput output) {
+	public ExampleModAppearanceModelProvider(FabricPackOutput output) {
 		super(output);
 	}
 
