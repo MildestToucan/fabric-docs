@@ -9,6 +9,14 @@ resources:
   https://github.com/badasintended/ravel: Source Code for Ravel
 ---
 
+<!---->
+
+::: warning
+
+Mappings are not officially supported on 26.1. Before updating a mod that is using Yarn Mappings to 26.1, migrate to Mojang Mappings before changing the Minecraft dependency. The following docs assume you are using 1.21.11.
+
+:::
+
 [Ravel](https://github.com/badasintended/ravel) is a plugin for IntelliJ IDEA to remap source files, based on [IntelliJ's PSI](https://plugins.jetbrains.com/docs/intellij/psi.html) and [Mapping-IO](https://github.com/FabricMC/mapping-io). It supports remapping Java, Kotlin, Mixins (written in Java), Class Tweakers, and Access Wideners.
 
 Install it from [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/28938-ravel-remapper) or download the ZIP file from [GitHub Releases](https://github.com/badasintended/ravel/releases) and install it by clicking the gear icon on the plugin settings and clicking **Install Plugin From Disk**.

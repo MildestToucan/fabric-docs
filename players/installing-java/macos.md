@@ -22,9 +22,9 @@ $(/usr/libexec/java_home -v 25)/bin/java --version
 You should see something like the following:
 
 ```text:no-line-numbers
-openjdk 25.0.9 2025-10-21 LTS
-OpenJDK Runtime Environment Temurin-25.0.9+10 (build 25.0.9+10-LTS)
-OpenJDK 64-Bit Server VM Temurin-25.0.9+10 (build 25.0.9+10-LTS, mixed mode, sharing)
+openjdk 25.0.2 2026-01-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.2+10 (build 25.0.2+10-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.2+10 (build 25.0.2+10-LTS, mixed mode, sharing)
 ```
 
 Notice the version number: in the example above it is `25.0.9`.
@@ -73,9 +73,9 @@ Once the installation is complete, you can verify that Java 25 is active by open
 If the command succeeds, you should see something like this:
 
 ```text:no-line-numbers
-openjdk 25.0.9 2025-10-21 LTS
-OpenJDK Runtime Environment Temurin-25.0.9+10 (build 25.0.9+10-LTS)
-OpenJDK 64-Bit Server VM Temurin-25.0.9+10 (build 25.0.9+10-LTS, mixed mode, sharing)
+openjdk 25.0.2 2026-01-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.2+10 (build 25.0.2+10-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.2+10 (build 25.0.2+10-LTS, mixed mode, sharing)
 ```
 
 If you encounter any issues, feel free to ask for help in the [Fabric Discord](https://discord.fabricmc.net/) in the `#player-support` channel.

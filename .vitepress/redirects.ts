@@ -29,4 +29,20 @@ export default [
     from: /develop[/]porting[/](next|26[.]1)([/]|$)/,
     dest: "26.1/develop/porting/",
   },
+  {
+    from: /develop[/]blocks[/]transparency-and-tinting$/,
+    dest: "develop/blocks/block-tinting/",
+  },
+  {
+    from: /develop[/]blocks[/]block-tinting$/,
+    dest: "develop/blocks/transparency-and-tinting/",
+  },
+  {
+    from: /develop[/]porting[/]mappings[/]loom$/,
+    dest: "1.21.11/develop/porting/mappings/loom/",
+  },
+  {
+    from: /develop[/]porting[/]mappings[/]ravel$/,
+    dest: "1.21.11/develop/porting/mappings/ravel/",
+  },
 ] satisfies { from: RegExp; dest: string }[];

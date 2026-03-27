@@ -128,7 +128,7 @@ To texture your fluid, you should use Fabric API's `FluidRenderHandlerRegistry`.
 
 ::: tip
 
-For simplicity, this demo uses a simplified block tint source that constantly tints the vanilla water texture green. For more details on `BlockTintSource`, see [Block Tinting](../blocks/block-tinting).
+For simplicity, this demo uses `BlockTintSources.constant` to apply a constant green tint to the vanilla water texture. For more details on `BlockTintSource`, see [Block Tinting](../blocks/block-tinting).
 
 :::
 
