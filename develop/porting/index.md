@@ -3,6 +3,7 @@ title: Porting to 26.1
 description: Guidelines for porting to Minecraft 26.1, the latest version of Minecraft.
 authors:
   - cassiancc
+  - ChampionAsh5357
 resources:
   ./26.1/fabric-api: Fabric API 26.1 Porting Guide
   https://minecraft.wiki/w/Java_Edition_26.1: Java Edition 26.1 - Minecraft Wiki
