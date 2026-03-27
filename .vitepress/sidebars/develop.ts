@@ -372,7 +372,7 @@ export default [
         items: [
           {
             text: "develop.porting.fabric_api",
-            link: "/26.1/develop/porting/fabric-api",
+            link: "/develop/porting/fabric-api",
           },
         ],
       },
