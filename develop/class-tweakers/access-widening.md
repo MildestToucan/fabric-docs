@@ -75,12 +75,6 @@ To make a private final field both accessible and mutable, you must make two sep
 
 For class tweaking, classes use their [internal names](../mixins/bytecode#class-names). For fields and methods you must specify their class name, their name, and their [bytecode descriptor](../mixins/bytecode#field-and-method-descriptors).
 
-::: tip
-
-The names of targets need to correspond to your current mappings.
-
-:::
-
 ::: tabs
 
 == Classes
@@ -127,9 +121,8 @@ Manually writing access widener entries is time-consuming and prone to human err
 
 ### mcsrc.dev {#mcsrc-dev}
 
-Available for all versions with an [unobfuscated JAR](../migrating-mappings/index#whats-going-on-with-mappings) namely 1.21.11 and above,
+Available for all versions with an [unobfuscated JAR](../migrating-mappings/index#whats-going-on-with-mappings), namely 1.21.11 and above,
 [mcsrc](https://mcsrc.dev) allows you to decompile and navigate Minecraft source in the browser and copy Mixin, access widener or access transformer targets to clipboard.
-The names of classes, methods and fields on [mcsrc](https://mcsrc.dev) will align with [Mojang Mappings](../migrating-mappings/index#mappings).
 
 To copy an access widener entry, first navigate to the class which you want to modify, and right-click on your target to open the popup menu.
 
