@@ -160,20 +160,6 @@ A confirmation should now pop up on the element you right-clicked.
 
 You can then paste the entry in your class tweaker file.
 
-### Linkie {#linkie}
-
-[Linkie](https://linkie.shedaniel.dev) is a website that allows you to browse and translate across mappings. It also provides access widener entries for the class, method or field you're viewing.
-
-First, make sure you have the correct version and mappings selected on the menu on the left:
-
-![Correct version and mappings selected on Linkie](/assets/develop/class-tweakers/access-widening/linkie-version-mappings-select.png)
-
-Then, search for the element you want to modify, and the access widener entry will be listed as `AW` under the result:
-
-![A search result in Linkie](/assets/develop/class-tweakers/access-widening/linkie-search-results.png)
-
-You can copy it and then paste the entry in your class tweaker file.
-
 ## Applying Changes {#applying-changes}
 
 To see your changes applied, you must refresh your Gradle project by [regenerating sources](../getting-started/generating-sources). The elements you targeted should
